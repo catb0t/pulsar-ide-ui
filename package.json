@@ -1,9 +1,9 @@
 {
   "name": "pulsar-ide-ui",
   "version": "0.13.2",
-  "description": "A collection of Atom UIs to support language services.",
+  "description": "A collection of Pulsar UIs to support language services.",
   "keywords": [],
-  "repository": "https://github.com/facebook-atom/atom-ide-ui",
+  "repository": "https://github.com/sebkolind/pulsar-ide-ui",
   "license": "BSD-3-Clause",
   "engines": {
     "atom": ">= 1.25.0"
@@ -85,5 +85,5 @@
     "flow-bin": "0.85.0",
     "prettier": "1.13.6"
   },
-  "private": true
+  "private": false
 }
