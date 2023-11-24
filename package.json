@@ -3,7 +3,6 @@
   "version": "0.13.5",
   "description": "A collection of Pulsar UIs to support language services.",
   "keywords": [],
-  "repository": "https://github.com/sebkolind/pulsar-ide-ui",
   "license": "BSD-3-Clause",
   "engines": {
     "atom": ">= 1.25.0"
