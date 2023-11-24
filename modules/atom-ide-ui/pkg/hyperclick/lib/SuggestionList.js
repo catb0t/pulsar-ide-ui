@@ -302,7 +302,7 @@ class SuggestionListComponent extends React.Component<Props, State> {
   }
 }
 
-const SuggestionListHTMLElement = document.registerElement(
+const SuggestionListHTMLElement = customElements.define(
   'hyperclick-suggestion-list',
   {
     prototype: SuggestionListElement.prototype,
