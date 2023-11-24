@@ -1,5 +1,5 @@
 {
-  "name": "atom-ide-ui",
+  "name": "pulsar-ide-ui",
   "version": "0.13.1",
   "description": "A collection of Atom UIs to support language services.",
   "keywords": [],
