@@ -12,12 +12,20 @@
 
 /* eslint-disable nuclide-internal/no-commonjs */
 
-import fs from 'fs';
+// import fs from 'fs';
+const fs = require('fs');
+
 // eslint-disable-next-line nuclide-internal/prefer-nuclide-uri
-import path from 'path';
-import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
-import FeatureLoader from 'nuclide-commons-atom/FeatureLoader';
-import displayNuclideWarning from './display-nuclide-warning';
+// import path from 'path';
+const path = require('path');
+// import UniversalDisposable from 'nuclide-commons/UniversalDisposable';
+const UniversalDisposable = path.resolve(__dirname, 'nuclide-commons/UniversalDisposable');
+// import FeatureLoader from 'nuclide-commons-atom/FeatureLoader';
+
+// doesn't work any differently with or without the last property access           \/
+const FeatureLoader = path.resolve(__dirname, 'nuclide-commons-atom/FeatureLoader').FeatureLoader;
+// import displayNuclideWarning from './display-nuclide-warning';
+const displayNuclideWarning = path.resolve(__dirname, 'display-nuclide-warning');
 
 const featureDir = path.join(__dirname, 'modules/atom-ide-ui/pkg');
 const features = fs
@@ -46,7 +54,7 @@ const features = fs
  * See the following post for more context:
  * https://nuclide.io/blog/2016/01/13/Nuclide-v0.111.0-The-Unified-Package/
  */
-let disposables: ?UniversalDisposable;
+let disposables = null;
 const featureLoader = new FeatureLoader({
   path: __dirname,
   config: {},
